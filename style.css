@@ -1,0 +1,115 @@
+/* General */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #181818;
+    color: #ffffff; 
+    background: linear-gradient(270deg, #FF0000, #000000); 
+    background-size: 400% 400%;
+    animation: gradient-animation 10s ease infinite, text-color-animation 10s ease infinite;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 800px;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #FF0000;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 2s ease;
+}
+
+/* Clase burbuja */
+.burbuja {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+    line-height: 1.6em;
+    color: #FF0000; 
+    animation: fadeIn 3s ease, text-color-animation 10s ease infinite;
+}
+
+/* Imagen */
+.imagen {
+    width: 100%;
+    height: auto;
+    border: 2px solid #FF0000; 
+    border-radius: 5px;
+    margin: 20px 0;
+    animation: fadeIn 4s ease;
+}
+
+ol {
+    text-align: left;
+    margin: 20px auto;
+    color: #FF0000; 
+}
+
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes text-color-animation {
+    0% {
+        color: #FF0000;
+    }
+    50% {
+        color: #FFFFFF; 
+    }
+    100% {
+        color: #FF0000; 
+    }
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+        padding: 10px;
+    }
+
+    .burbuja {
+        font-size: 1em;
+    }
+
+    .imagen {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 95%;
+    }
+
+    .burbuja {
+        font-size: 0.9em;
+    }
+
+    .imagen {
+        width: 100%;
+    }
+}
